@@ -1,0 +1,186 @@
+:root {
+    --bg: #f4f7fb;
+    --panel: #ffffff;
+    --panel-alt: #f7f9fc;
+    --primary: #5b7cff;
+    --primary-dark: #4868f1;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: rgba(17, 24, 39, 0.08);
+    --shadow: 0 20px 45px rgba(31, 41, 55, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    padding: 30px 28px 22px;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.1;
+}
+
+.subtitle {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.panel {
+    margin-bottom: 18px;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+textarea {
+    width: 100%;
+    min-height: 180px;
+    resize: vertical;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--panel);
+    color: var(--text);
+    font: inherit;
+    padding: 18px 18px 16px;
+    box-shadow: inset 0 2px 6px rgba(15, 23, 42, 0.02);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: rgba(91, 124, 255, 0.6);
+    box-shadow: 0 0 0 4px rgba(91, 124, 255, 0.12);
+}
+
+#text-output {
+    background: var(--panel-alt);
+    cursor: default;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin: 10px 0 22px;
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 20px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    box-shadow: 0 10px 20px rgba(91, 124, 255, 0.22);
+}
+
+.secondary-btn {
+    background: #eef2ff;
+    color: var(--text);
+}
+
+.example-card {
+    background: rgba(91, 124, 255, 0.04);
+    border: 1px solid rgba(91, 124, 255, 0.08);
+    border-radius: 18px;
+    padding: 18px 18px 16px;
+}
+
+.example-card h2 {
+    margin: 0 0 12px;
+    font-size: 1.1rem;
+}
+
+.example-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.example-row:last-child {
+    margin-bottom: 0;
+}
+
+.example-label {
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.example-value {
+    color: var(--text);
+}
+
+.result {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+@media (max-width: 620px) {
+    body {
+        padding: 18px;
+    }
+    .app-shell {
+        padding: 22px 18px 18px;
+        border-radius: 20px;
+    }
+    .actions {
+        flex-direction: column;
+    }
+    button {
+        width: 100%;
+    }
+}

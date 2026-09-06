@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P-Word Converter</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="app-shell">
+        <header class="app-header">
+            <p class="eyebrow">Text transformer</p>
+            <h1>P-Word Converter</h1>
+            <p class="subtitle">Add P to the beginning of every word</p>
+        </header>
+
+        <section class="panel input-panel">
+            <label for="text-input" class="panel-label">Your text</label>
+            <textarea id="text-input" placeholder="Type or paste your text here..." aria-label="Text to convert"></textarea>
+        </section>
+
+        <section class="panel output-panel">
+            <div class="panel-header">
+                <label for="text-output" class="panel-label">Converted text</label>
+            </div>
+            <textarea id="text-output" readonly aria-label="Converted text output"></textarea>
+        </section>
+
+        <div class="actions">
+            <button id="copy-btn" class="primary-btn" type="button">Copy</button>
+            <button id="clear-btn" class="secondary-btn" type="button">Clear</button>
+        </div>
+
+        <section class="example-card" aria-label="Example conversion">
+            <h2>Example</h2>
+            <div class="example-row">
+                <span class="example-label">Input:</span>
+                <span class="example-value">rice late play</span>
+            </div>
+            <div class="example-row">
+                <span class="example-label">Output:</span>
+                <span class="example-value result">Price Plate Pplay</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
