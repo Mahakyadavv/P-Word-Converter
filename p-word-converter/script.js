@@ -3,14 +3,18 @@ const output = document.getElementById('text-output');
 const copyButton = document.getElementById('copy-btn');
 const clearButton = document.getElementById('clear-btn');
 
-// Replace only the star character with a lowercase p.
-// Keep everything else, including spaces and word casing, exactly as typed.
+// Only convert when the user intentionally uses the marker characters.
+// This avoids adding P automatically to normal typing.
 function convertText(text) {
     if (!text.trim()) {
         return '';
     }
 
-    return text.replace(/\*/g, 'p');
+    if (!text.includes('*') && !text.includes('_')) {
+        return text;
+    }
+
+    return text.replace(/_/g, 'P').replace(/\*/g, 'p');
 }
 
 function updateOutput() {

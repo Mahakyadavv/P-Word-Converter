@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "P-Word Converter",
+    "version": "1.0.0",
+    "description": "Add P to the beginning of every word in text.",
+    "action": {
+        "default_title": "P-Word Converter",
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "clipboardWrite"
+    ]
+}
